@@ -1,0 +1,32 @@
+// ## Colors
+
+// ### Primary
+
+.color {
+    color:hsl(220, 98%, 61%);   // - Bright Blue: 
+}
+// - Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+
+// ### Neutral
+
+// ### Light Theme
+
+.color {
+    color:hsl(0, 0%, 98%);      // - Very Light Gray:
+    color:hsl(236, 33%, 92%);   // - Very Light Grayish Blue:
+    color:hsl(233, 11%, 84%);   // - Light Grayish Blue:
+    color:hsl(236, 9%, 61%);    // - Dark Grayish Blue:
+    color:hsl(235, 19%, 35%);   // - Very Dark Grayish Blue:
+}
+
+// ### Dark Theme
+
+.color {
+    color:hsl(235, 21%, 11%);   // - Very Dark Blue: 
+    color:hsl(235, 24%, 19%);   // - Very Dark Desaturated Blue: 
+    color:hsl(234, 39%, 85%);   // - Light Grayish Blue: 
+    color:hsl(236, 33%, 92%);   // - Light Grayish Blue (hover): 
+    color:hsl(234, 11%, 52%);   // - Dark Grayish Blue: 
+    color:hsl(233, 14%, 35%);   // - Very Dark Grayish Blue: 
+    color:hsl(237, 14%, 26%);   // - Very Dark Grayish Blue: 
+}

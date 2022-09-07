@@ -1,0 +1,7 @@
+.wrapper {
+    @include flex(row, nowrap, start, center);
+
+    width: 95%;
+    margin: auto;
+    gap: .5em;
+}

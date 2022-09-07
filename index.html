@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <main class="main">
+    <div class="main__wrapper">
+      <header class="header wrapper">
+        <h1 class="header__tittle">ToDo</h1>
+        <a href="" class="header__sunMoon"></a>
+      </header>
+      
+      <div class="intro wrapper">
+        <input type="checkbox" class="checkbox intro__check">
+        <input type="text" value="Create a new ToDo" class="intro__input">
+      </div>
+  
+      <div class="taskArea wrapper">
+        <ul class="taskArea__list">
+          <li class="taskArea__item">
+            <div class="taskArea__left">
+              <input type="checkbox" class="checkbox taskArea__check">
+              <input type="text" value="Complete online JavaScript course" class="taskArea__text" disabled>
+            </div>
+            <div class="taskArea__right">
+              <i class="taskArea__edit"></i>
+              <i class="taskArea__delete"></i>
+            </div>
+          </li>
+  
+          <li class="taskArea__item">
+            <div class="taskArea__left">
+              <input type="checkbox" class="checkbox taskArea__check">
+              <input type="text" value="Jog around the park 3x" class="taskArea__text" disabled>
+            </div>
+            <div class="taskArea__right">
+              <i class="taskArea__edit"></i>
+              <i class="taskArea__delete"></i>
+            </div>
+          </li>
+  
+          <li class="taskArea__item">
+            <div class="taskArea__left">
+              <input type="checkbox" class="checkbox taskArea__check">
+              <input type="text" value="10 minutes meditation" class="taskArea__text" disabled>
+            </div>
+            <div class="taskArea__right">
+              <i class="taskArea__edit"></i>
+              <i class="taskArea__delete"></i>
+            </div>
+          </li>
+  
+          <li class="taskArea__item">
+            <div class="taskArea__left">
+              <input type="checkbox" class="checkbox taskArea__check">
+              <input type="text" value="Read for 1 hour" class="taskArea__text" disabled>
+            </div>
+            <div class="taskArea__right">
+              <i class="taskArea__edit"></i>
+              <i class="taskArea__delete"></i>
+            </div>
+          </li>
+  
+          <li class="taskArea__item">
+            <div class="taskArea__left">
+              <input type="checkbox" class="checkbox taskArea__check">
+              <input type="text" value="Pick up groceries" class="taskArea__text" disabled>
+            </div>
+            <div class="taskArea__right">
+              <i class="taskArea__edit"></i>
+              <i class="taskArea__delete"></i>
+            </div>
+          </li>
+          
+          <li class="taskArea__item">
+            <div class="taskArea__left">
+              <input type="checkbox" class="checkbox taskArea__check">
+              <input type="text" value="Complete Todo App on Fronted Mentor" class="taskArea__text" disabled>
+            </div>
+            <div class="taskArea__right">
+              <i class="taskArea__edit"></i>
+              <i class="taskArea__delete"></i>
+            </div>
+          </li>
+
+          <li class="taskArea__item">
+            <div class="taskArea__left">
+              <input type="checkbox" class="checkbox taskArea__check">
+              <input type="text" value="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, porro." class="taskArea__text" disabled>
+            </div>
+            <div class="taskArea__right">
+              <i class="taskArea__edit"></i>
+              <i class="taskArea__delete"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+  
+      <footer class="footer wrapper">
+        <span class="footer__idk">X items left</span>
+        <ul class="footer__list">
+          <li class="footer__item">All</li>
+          <li class="footer__item">Active</li>
+          <li class="footer__item">Completed</li>
+        </ul>
+        <span class="footer__clear">Clear Completed</span>
+      </footer>
+    </div>
+  </main>
+
+
+  <!-- Drag and drop to reorder list -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

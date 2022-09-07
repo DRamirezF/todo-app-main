@@ -1,0 +1,31 @@
+.footer {
+    @include flex(row, wrap, space-between, center);
+    gap: 1em;
+
+    background-color: darkseagreen;
+    
+    &__idk {
+        background-color: grey;
+        order: 0;
+    }
+    &__list {
+        @include flex(row, nowrap, center, center);
+        gap: .5em;
+
+        // width: auto;
+        margin: auto;
+        background-color: grey;
+        order: 2;
+
+        @include media(462px){
+            margin: 0;
+            order: 0;
+        }
+
+    }
+    &__item {}
+    &__clear {
+        background-color: grey;
+
+    }
+}
