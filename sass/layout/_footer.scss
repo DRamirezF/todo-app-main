@@ -17,7 +17,7 @@
         background-color: grey;
         order: 2;
 
-        @include media(462px){
+        @include media(493px){
             margin: 0;
             order: 0;
         }

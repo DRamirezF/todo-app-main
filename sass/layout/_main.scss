@@ -1,14 +1,13 @@
 .main {
-    @include flex(column, nowrap, center, center);
+    @include flex(column, nowrap, center, center){}
 
-    background-color: green;
     height: 100vh;
     
     &__wrapper {
         width: 90%;
         max-width: 500px;
         // height: 100%;
-        background-color: violet;
+        // background-color: violet;
         @include flex(column, nowrap, start, stretch);
         // gap: 1em;
     }

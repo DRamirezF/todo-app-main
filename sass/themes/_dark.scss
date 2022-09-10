@@ -1,0 +1,20 @@
+.dark {
+    background-color: $Very-Dark-Blue;
+    background-image: url(../../images/bg-mobile-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+
+    @include media(493px){
+        background-size: 100% 28%;
+    }
+
+    @include media(1024px){
+        background-image: url(../../images/bg-desktop-dark.jpg);
+        background-size: 100% 30%;
+    }
+
+    &__sunMoon {
+        background-image: url(../../images/icon-sun.svg);
+        background-repeat: no-repeat;
+    }
+}
