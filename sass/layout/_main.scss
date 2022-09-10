@@ -1,5 +1,5 @@
 .main {
-    @include flex(column, nowrap, center, center){}
+    @include flex(column, nowrap, center, center);
 
     height: 100vh;
     
