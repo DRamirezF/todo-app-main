@@ -78,7 +78,7 @@ html {
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
@@ -155,33 +155,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.color {
-  color: hsl(220deg, 98%, 61%);
-}
-
-.color {
-  color: hsl(0deg, 0%, 98%);
-  color: hsl(236deg, 33%, 92%);
-  color: hsl(233deg, 11%, 84%);
-  color: hsl(236deg, 9%, 61%);
-  color: hsl(235deg, 19%, 35%);
-}
-
-.color {
-  color: hsl(235deg, 21%, 11%);
-  color: hsl(235deg, 24%, 19%);
-  color: hsl(234deg, 39%, 85%);
-  color: hsl(236deg, 33%, 92%);
-  color: hsl(234deg, 11%, 52%);
-  color: hsl(233deg, 14%, 35%);
-  color: hsl(237deg, 14%, 26%);
-}
-
 .checkbox {
-  width: 20px;
-  height: 20px;
-  background-color: aquamarine;
+  min-width: 18px;
+  height: 18px;
+  background-color: linear-gradient hsl(192deg, 100%, 67%) to hsl(280deg, 87%, 65%);
+  border: 1px solid hsl(233deg, 11%, 84%);
   border-radius: 50%;
+  opacity: 0.2;
+  margin: 0 0.5em 0 1em;
+}
+.checkbox:hover {
+  border-color: linear-gradient hsl(192deg, 100%, 67%) to hsl(280deg, 87%, 65%);
+  opacity: 1;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -217,7 +203,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  gap: 2em;
+  min-height: 100vh;
+  height: 650px;
 }
 .main__wrapper {
   width: 90%;
@@ -232,9 +220,9 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header {
@@ -254,11 +242,17 @@ body {
   margin: 0 auto 2em;
 }
 .header__tittle {
-  color: #fff;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 8px;
+  pointer-events: none;
+}
+@media screen and (min-width: 1024px) {
+  .header__tittle {
+    font-size: 2.2em;
+    letter-spacing: 10px;
+  }
 }
 .header__sunMoon {
   min-width: 20px;
@@ -266,19 +260,26 @@ body {
 }
 
 .intro {
+  min-height: 50px;
+  font-size: 0.8em;
   margin: 0 auto 1em;
+  border-radius: 0.3em;
+}
+@media screen and (min-width: 500px) {
+  .intro {
+    font-size: 1em;
+    min-height: 65px;
+  }
+}
+.intro__check {
+  margin: 0 0.5em 0 1.2em;
 }
 .intro__input {
-  background-color: antiquewhite;
   width: 100%;
 }
 
-.taskArea {
-  background-color: chocolate;
-}
 .taskArea__list {
   width: 100%;
-  background-color: darkcyan;
 }
 .taskArea__item {
   display: -webkit-box;
@@ -295,9 +296,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 50px;
-  background-color: blueviolet;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-bottom: 0.1px solid;
+}
+.taskArea__item:hover {
+  cursor: pointer;
+}
+.taskArea__item:hover .taskArea__right {
+  opacity: 1;
+}
+@media screen and (min-width: 500px) {
+  .taskArea__item {
+    min-height: 65px;
+  }
 }
 .taskArea__left {
   display: -webkit-box;
@@ -313,12 +323,29 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5em;
-  width: 80%;
+  width: 70%;
+}
+@media screen and (min-width: 1024px) {
+  .taskArea__left {
+    width: 80%;
+  }
 }
 .taskArea__text {
-  background-color: lightcoral;
   width: 100%;
+  font-size: 0.8em;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.taskArea__text:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 500px) {
+  .taskArea__text {
+    font-size: 1em;
+    font-weight: 400;
+  }
 }
 .taskArea__right {
   display: -webkit-box;
@@ -334,17 +361,39 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5em;
+}
+@media screen and (min-width: 1024px) {
+  .taskArea__right {
+    opacity: 0;
+  }
 }
 .taskArea__edit {
-  background-color: darkkhaki;
-  width: 20px;
-  height: 20px;
+  fill: hsl(233deg, 11%, 84%);
+  width: 15px;
+  height: 15px;
+}
+.taskArea__edit:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .taskArea__edit {
+    width: 20px;
+    height: 20px;
+  }
 }
 .taskArea__delete {
-  background-color: darkkhaki;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
+  margin: 0 1em 0 0.8em;
+}
+.taskArea__delete:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .taskArea__delete {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .footer {
@@ -361,13 +410,24 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 1em;
-  background-color: darkseagreen;
+  min-height: 50px;
+  font-size: 0.8em;
+  position: relative;
+}
+@media screen and (min-width: 500px) {
+  .footer {
+    min-height: 65px;
+    font-size: 1em;
+  }
 }
 .footer__idk {
-  background-color: grey;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
+  margin: 0 0 0 1.2em;
+}
+.footer__idk:hover {
+  cursor: pointer;
 }
 .footer__list {
   display: -webkit-box;
@@ -384,42 +444,143 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5em;
-  margin: auto;
-  background-color: grey;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  width: 100%;
+  min-height: 50px;
+  font-weight: 700;
+  font-size: 1.2em;
+  position: absolute;
+  top: 130%;
 }
-@media screen and (min-width: 493px) {
+@media screen and (min-width: 500px) {
   .footer__list {
     margin: 0;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    font-size: 1em;
+    width: auto;
+    position: static;
+    top: auto;
   }
 }
+.footer__item:hover {
+  cursor: pointer;
+}
 .footer__clear {
-  background-color: grey;
+  margin: 0 1.2em 0 0;
+}
+.footer__clear:hover {
+  cursor: pointer;
+}
+
+.end {
+  position: relative;
+  top: 8%;
+  pointer-events: none;
+}
+@media screen and (min-width: 500px) {
+  .end {
+    top: 0;
+  }
 }
 
 .dark {
   background-color: hsl(235deg, 21%, 11%);
   background-image: url(../../images/bg-mobile-dark.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 25%;
-}
-@media screen and (min-width: 493px) {
-  .dark {
-    background-size: 100% 28%;
-  }
+  background-size: 100% 32%;
 }
 @media screen and (min-width: 1024px) {
   .dark {
     background-image: url(../../images/bg-desktop-dark.jpg);
-    background-size: 100% 30%;
+    background-size: 100% 35%;
   }
 }
-.dark__sunMoon {
+.dark__header {
+  color: hsl(0deg, 0%, 98%);
+}
+.dark__header .header__sunMoon {
   background-image: url(../../images/icon-sun.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
+}
+.dark__intro {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
+}
+.dark__taskArea {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(0deg, 0%, 98%);
+}
+.dark__taskArea .taskArea__item {
+  border-color: hsl(233deg, 14%, 35%);
+}
+.dark__taskArea .taskArea__item:hover {
+  color: hsl(236deg, 33%, 92%);
+}
+.dark__footer {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(233deg, 14%, 35%);
+}
+.dark__footer-hover:hover {
+  color: hsl(233deg, 11%, 84%);
+}
+.dark__footer .footer__list {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
+}
+.dark__footer .footer__item-active {
+  color: hsl(220deg, 98%, 61%);
+}
+
+.dark {
+  background-color: hsl(235deg, 21%, 11%);
+  background-image: url(../../images/bg-mobile-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 32%;
+}
+@media screen and (min-width: 1024px) {
+  .dark {
+    background-image: url(../../images/bg-desktop-dark.jpg);
+    background-size: 100% 35%;
+  }
+}
+.dark__header {
+  color: hsl(0deg, 0%, 98%);
+}
+.dark__header .header__sunMoon {
+  background-image: url(../../images/icon-sun.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.dark__intro {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
+}
+.dark__taskArea {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(0deg, 0%, 98%);
+}
+.dark__taskArea .taskArea__item {
+  border-color: hsl(233deg, 14%, 35%);
+}
+.dark__taskArea .taskArea__item:hover {
+  color: hsl(236deg, 33%, 92%);
+}
+.dark__footer {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(233deg, 14%, 35%);
+}
+.dark__footer-hover:hover {
+  color: hsl(233deg, 11%, 84%);
+}
+.dark__footer .footer__list {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
+}
+.dark__footer .footer__item-active {
+  color: hsl(220deg, 98%, 61%);
 }

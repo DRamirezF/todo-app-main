@@ -1,9 +1,20 @@
 .intro {
+    min-height: 50px;
+    font-size: .8em;
+    
     margin: 0 auto 1em;
 
-    // &__check {}
+    border-radius: .3em;
+
+    @include media($customOne){
+        font-size: 1em;
+        min-height: 65px;
+    }
+    
+    &__check {
+        margin: 0 .5em 0 1.2em;
+    }
     &__input {
-        background-color: antiquewhite;
         width: 100%;
     }
 

@@ -9,9 +9,3 @@
         align-content: $align;
     }
 }
-
-@mixin media ( $media : 915px ) {
-    @media screen and (min-width: $media){
-        @content;
-    }
-}

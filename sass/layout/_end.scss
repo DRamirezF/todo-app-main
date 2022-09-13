@@ -1,0 +1,10 @@
+.end {
+    position: relative;
+    top: 8%;
+
+    pointer-events: none;
+
+    @include media($customOne){
+        top: 0;
+    }
+}

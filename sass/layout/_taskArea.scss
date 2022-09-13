@@ -1,43 +1,90 @@
 .taskArea {
 
-    background-color: chocolate;
 
     &__list {
         width: 100%;
-        background-color: darkcyan;
     }
     &__item {
         @include flex(row, nowrap, space-between, center);
 
         min-height: 50px;
-        background-color: blueviolet;
-        border-top: 1px solid #fff;
-        border-bottom: 1px solid #fff;
+        border-bottom: .1px solid;
+
+        &:hover {
+            cursor: pointer;
+
+            .taskArea__right {
+                opacity: 1;
+            }
+        }
+        
+        @include media($customOne) {
+            min-height: 65px
+        }
     }
 
     &__left {
         @include flex(row, nowrap, start, center);
-        gap: .5em;
-        width: 80%;
+        width: 70%;
+
+        @include media(1024px){
+            width: 80%;
+        }
     }
-    &__check {}
     &__text {
-        background-color: lightcoral;
         width: 100%;
+        font-size: .8em;
+        font-weight: 300;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include media(500px){
+            font-size: 1em;
+            font-weight: 400
+        }
     }
 
     &__right {
         @include flex(row, nowrap, start, center);
-        gap: .5em;
+
+        @include media(1024px){
+            opacity: 0;
+        }
     }
     &__edit {
-        background-color: darkkhaki;
-        width: 20px;
-        height: 20px;
+        fill: $Light-Grayish-Blue;
+        width: 15px;
+        height: 15px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include media(1024px){
+            width: 20px;
+            height: 20px;
+        }
+
     }
     &__delete {
-        background-color: darkkhaki;
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
+
+        margin: 0 1em 0 .8em;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include media(1024px){
+            width: 20px;
+            height: 20px;
+        }
     }
 }

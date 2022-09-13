@@ -1,6 +1,16 @@
 .checkbox {
-    width: 20px;
-    height: 20px;
-    background-color: aquamarine;
+    min-width: 18px;
+    height: 18px;
+    background-color: $Gradient;
+    border: 1px solid $Light-Grayish-Blue;
     border-radius: 50%;
+    opacity: .2;
+    margin: 0 .5em 0 1em;
+
+    &:hover {
+        border-color: $Gradient;
+        opacity: 1;
+        cursor: pointer;
+    }
+    
 }
